@@ -1,0 +1,12 @@
+@import "@/scss";
+
+.container {
+  display: flex;
+  margin-top: $header-height;
+
+  .children {
+    flex: 1;
+    display: flex;
+    padding: 12px;
+  }
+}
