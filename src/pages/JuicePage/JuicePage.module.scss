@@ -1,0 +1,198 @@
+@import "@/scss";
+
+.wrapper {
+  @include flex(center, flex-start);
+  flex: 1;
+}
+
+.container {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 900px;
+  height: 550px;
+  font-family: sans-serif;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-box-shadow: -7px 10px 111px -33px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -7px 10px 111px -33px rgba(0, 0, 0, 0.75);
+  box-shadow: -7px 10px 111px -33px rgba(0, 0, 0, 0.75);
+  transition: background 0.5s ease;
+
+  button {
+    font-size: 18px;
+    padding: 10px 30px;
+    border-radius: 15px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+  }
+
+  .photos {
+    display: flex;
+    margin-left: 20px;
+    position: relative;
+
+    .juice-wrapper {
+      width: 90px;
+      height: 120px;
+      padding-bottom: 10px;
+      z-index: 1;
+
+      .static-juice {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+    }
+
+    .line {
+      width: 0;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      background-color: #fff;
+      transition: all 0.5s ease;
+    }
+
+    .un-active {
+      opacity: 0.5;
+      transition: opacity 0.5s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .juice-wheel {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    position: absolute;
+    right: -280px;
+    bottom: -300px;
+    transform: rotate(-45deg);
+    transition: transform 1s;
+    z-index: 1;
+
+    img {
+      width: 320px;
+    }
+
+    .dynamic-juice-1 {
+      position: absolute;
+      top: -350px;
+      right: 90px;
+    }
+
+    .dynamic-juice-2 {
+      position: absolute;
+      transform: rotate(90deg);
+      right: -290px;
+      top: 30px;
+    }
+
+    .dynamic-juice-3 {
+      position: absolute;
+      transform: rotate(180deg);
+      bottom: -350px;
+      right: 83px;
+    }
+
+    .dynamic-juice-4 {
+      position: absolute;
+      transform: rotate(-90deg);
+      top: 30px;
+      left: -290px;
+    }
+  }
+
+  .fruits-wheel {
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    position: absolute;
+    top: -600px;
+    left: -480px;
+    transform: rotate(-45deg);
+    transition: transform 1s;
+    z-index: 0;
+
+    img {
+      width: 650px;
+      opacity: 40%;
+    }
+
+    .dynamic-fruits-1 {
+      position: absolute;
+      transform: rotate(90deg);
+      bottom: -500px;
+      left: 10px;
+    }
+
+    .dynamic-fruits-2 {
+      position: absolute;
+      transform: rotate(180deg);
+      bottom: 200px;
+      left: -580px;
+    }
+
+    .dynamic-fruits-3 {
+      position: absolute;
+      transform: rotate(100deg);
+      top: -350px;
+      left: 90px;
+    }
+
+    .dynamic-fruits-4 {
+      position: absolute;
+      bottom: 120px;
+      right: -600px;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 80px;
+  margin: 30px;
+
+  .juice-text {
+    z-index: 1;
+
+    h1 {
+      text-align: center;
+      color: white;
+    }
+
+    .juice-info {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      text-align: center;
+      margin-top: 20px;
+      color: white;
+    }
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
