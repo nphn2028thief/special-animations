@@ -1,0 +1,29 @@
+@import "@/scss";
+
+.wrapper {
+  height: calc(100vh - $header-height);
+  width: $sidebar-width;
+  padding: 12px;
+  color: #fff;
+  background-color: transparent;
+  border-right: 1px solid transparent;
+  overflow: auto;
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .nav-item {
+      display: flex;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      overflow: hidden;
+
+      a {
+        flex: 1;
+        padding: 8px 16px;
+      }
+    }
+  }
+}
